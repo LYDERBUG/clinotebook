@@ -19,4 +19,10 @@
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="drafts\draft1.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="drafts\README.md" />
+  </ItemGroup>
 </Project>

@@ -1,0 +1,56 @@
+03/01/2023
+note: function responsible for read/write
+
+void logfile(std::string filename, std::string mode) {
+    if (mode == "write") {
+
+    }
+    if (mode == "read") {
+    
+    }
+    if (mode == "append") {//later
+
+    }
+
+    std::string line;
+
+    std::fstream myfile;
+    myfile.open(filename, std::ios::out);//write and create a txt file
+    if (myfile.is_open()) {
+        myfile << "In copy we paste / In copper we oxidized";
+    }
+    myfile.close();//remember to close the file or else...
+
+
+    myfile.open(filename, std::ios::in);//read a created txt file
+    if (myfile.is_open()) {
+        //std::string line;
+        std::cout << "File open\n";
+        while (std::getline(myfile, line)) {
+            std::cout << "(1) File content: " << line << std::endl;
+        }
+    }
+    else {
+        std::cout << "File not open";
+    }
+    myfile.close();
+
+
+    /*
+    myfile.open("myfile.txt", std::ios::app);//append a things into file
+    if (myfile.is_open()) {
+        myfile << " / In copper we oxidized";
+        myfile.close();
+    }
+    //reads the txt file again
+    myfile.open("myfile.txt", std::ios::in);
+    if (myfile.is_open()) {
+        while (std::getline(myfile, line)) {
+            std::cout << "\n(2) File content: " << line;
+        }
+    }
+    myfile.close();
+
+}
+    */
+}
